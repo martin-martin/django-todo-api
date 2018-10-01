@@ -10,6 +10,6 @@ class TodoSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('url', 'id', 'created', 'name', 'user', )
         extra_kwargs = {
             'url': {
-                'view-name': 'todos:todo-detail',
+                'view_name': 'todos:todo-detail',
             }
         }
