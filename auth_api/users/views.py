@@ -13,7 +13,7 @@ class UserList(generics.ListCreateAPIView):
         serializer.save(user=self.request.user)
 
 
-class UserDetail(generics.ListRetrieveUpdateDestroyAPIView):
+class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = UserSerializer
 
     def get_queryset(self):

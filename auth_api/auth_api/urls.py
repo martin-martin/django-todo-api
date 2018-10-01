@@ -23,6 +23,6 @@ urlpatterns = [
     path('docs/', include_docs_urls(title='Todo API',
                                     description='RESTful API for Todo items')),
     path('', views.api_root),
-    path('', include(users.urls), namespace='users'),
-    path('', include(todos.urls), namespace='todos'),
+    path('', include('users.urls'), name='users'),
+    path('', include('todos.urls'), name='todos'),
 ]

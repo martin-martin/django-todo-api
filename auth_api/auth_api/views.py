@@ -4,7 +4,7 @@ from rest_framework.reverse import reverse
 
 
 @api_view(['GET'])
-def api_view(request, format=None):
+def api_root(request, format=None):
     return Response({
             'users': reverse('users:user-list', request=request, format=format),
             'todos': reverse('todos:todo-list', request=request, format=format),

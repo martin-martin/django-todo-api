@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'todos',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -103,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # settings this to a custom User model - we'll create it later!
 # helps with customization later down the road
-AUTH_USER_MODEL = users.User
+AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

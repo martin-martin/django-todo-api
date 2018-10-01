@@ -2,7 +2,7 @@ from .models import Todo
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from .serializer import TodoSerializer
+from .serializers import TodoSerializer
 
 
 class TodoList(generics.ListCreateAPIView):
