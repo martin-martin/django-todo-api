@@ -23,6 +23,7 @@ urlpatterns = [
     path('docs/', include_docs_urls(title='Todo API',
                                     description='RESTful API for Todo items')),
     path('', views.api_root),
+    # https://stackoverflow.com/questions/48608894/specifying-a-namespace-in-include-without-providing-an-app-name
     path('', include(('users.urls', 'users'), namespace='users')),
     path('', include(('todos.urls', 'todos'), namespace='todos')),
 ]
